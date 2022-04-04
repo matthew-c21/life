@@ -1,0 +1,20 @@
+table {
+  border-spacing: 0px;
+}
+
+th, tr, td {
+  padding: 0.5px;
+}
+
+.life-cell {
+  width: 3em;
+  height: 3em;
+  text-align: center;
+  padding: -1;
+  background-color: black;
+  border-style: none;
+}
+
+.life-cell.alive {
+  background-color: yellow;
+}
