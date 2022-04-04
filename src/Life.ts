@@ -1,7 +1,8 @@
 type Life = boolean[][];
 
 function createLife(rows: number, cols: number): Life {
-  return Array(rows).map(() => Array(cols).fill(false));
+  if (rows === 0) return [[]]
+  return Array(rows).fill(null).map(() => Array(cols).fill(false));
 }
 
 /**
@@ -15,6 +16,10 @@ function countLivingNeighbors(life: Life, row: number, col: number): number | nu
   return 0;
 }
 
+function willBeAlive(life: Life, row: number, col: number): boolean | null {
+  return false;
+}
+
 function advance(life: Life): Life {
   return life;
 }
@@ -22,5 +27,6 @@ function advance(life: Life): Life {
 export {createLife, advance};
 
 export const _private = {
-  countLivingNeighbors
+  countLivingNeighbors,
+  willBeAlive,
 }
